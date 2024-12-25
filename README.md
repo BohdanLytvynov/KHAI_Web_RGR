@@ -1,2 +1,5 @@
-# KHAI_Web_RGR
-KHAI Web Labs
+# BG_test
+
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=BohdanLytvynov_BG_test)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BohdanLytvynov_BG_test&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BohdanLytvynov_BG_test) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=BohdanLytvynov_BG_test&metric=bugs)](https://sonarcloud.io/summary/new_code?id=BohdanLytvynov_BG_test) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=BohdanLytvynov_BG_test&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=BohdanLytvynov_BG_test) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=BohdanLytvynov_BG_test&metric=coverage)](https://sonarcloud.io/summary/new_code?id=BohdanLytvynov_BG_test) [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=BohdanLytvynov_BG_test&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=BohdanLytvynov_BG_test)

@@ -1,0 +1,65 @@
+<div *ngIf="sign_up_display" [ngClass]="show ? 'signup show' : 'signup hide'">
+  <div class="form">
+    <input #inpNick
+      type="text" 
+      [(ngModel)]="nickname" 
+      name="nickname" 
+      placeholder="your nickname or login"       
+      (ngModelChange)="nicknameChanged(inpNick.value)"
+      [ngClass]="{ 'form-input': validArray[0], 'error-input': !validArray[0] }">
+
+    <input #inpPass1
+      type="password" 
+      [(ngModel)]="password" 
+      name="password" 
+      placeholder="create a password" 
+      (ngModelChange)="pass1Changed(inpPass1.value)"
+      [ngClass]=" validArray[1]? 'form-input' : 'error-input' ">
+
+      <input #inpPass2
+      type="password" 
+      [(ngModel)]="password2" 
+      name="password" 
+      placeholder="repeate a password" 
+      (ngModelChange)="pass2Changed(inpPass2.value)"
+      [ngClass]=" validArray[2]? 'form-input' : 'error-input' "
+      >
+    <input #inpName
+      type="text" 
+      [(ngModel)]="name" 
+      name="name" 
+      placeholder="your name"       
+      (ngModelChange)="nameChanged(inpName.value)"
+      [ngClass]=" validArray[3]? 'form-input' : 'error-input' ">
+
+    <input #inpSurename
+      type="text" 
+      [(ngModel)]="surename" 
+      name="surename" 
+      placeholder="your surename" 
+      (ngModelChange)="surenameChanged(inpSurename.value)"
+      [ngClass]="validArray[4]? 'form-input' : 'error-input'">
+
+    <input #inpBirthDay
+      type="text" 
+      [(ngModel)]="birthday" 
+      name="birthday" 
+      placeholder="your birthday in form (yyyy-mm-dd)" 
+      (ngModelChange)="birthDayChanged(inpBirthDay.value)"
+      [ngClass]="validArray[5]? 'form-input' : 'error-input'">
+
+    <input #inpAddress
+      type="text" 
+      [(ngModel)]="address" 
+      name="address" 
+      placeholder="your address" 
+      (ngModelChange)="addressChanged(inpAddress.value)"
+      [ngClass]="validArray[6]? 'form-input' : 'error-input'">
+    <div class="btn-box">
+      <button (click)="registerUser()" #ButSubmit
+      [ngClass]="all_fields? 'btn' : 'btn-disabled' "  
+      >Submit</button>      
+    </div>
+  </div>
+  <button class="closeBtn" (click)="handleClose(false)"></button>
+</div>

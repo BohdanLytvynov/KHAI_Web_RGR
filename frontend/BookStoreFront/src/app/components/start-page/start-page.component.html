@@ -1,0 +1,21 @@
+<div class="start-page">
+  <div class="container">
+    <h1>Welcome to SoftServe Book Store!</h1>
+    <div class="btn-box">
+      <button class="btn" (click)="showLogInComponent()">Log In</button>
+      <button class="btn" (click)="showSignUpComponent()">Sign Up</button>
+    </div>
+  </div>
+  @if(login) {
+    <app-log-in 
+      [show]="showLogIn" 
+      (onChange)="hideLogInComponent(false)">
+    </app-log-in>
+  }
+  @if(signup) {
+    <app-sign-up 
+      [show]="showSignUp" 
+      (onChange)="hideSignUpComponent(false)">
+    </app-sign-up>
+  }
+</div>

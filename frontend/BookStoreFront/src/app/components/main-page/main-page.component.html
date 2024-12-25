@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="main-page">
+    <div class="main-header">
+      <h2>Main Page</h2>
+      <nav>
+        <a routerLink="/profile">My Profile</a>
+        <a (click)="onLogOutClicked()">Log Out</a>
+      </nav>
+    </div>
+    <div class="columns">
+      <app-books></app-books>
+      <app-authors></app-authors>
+    </div>
+  </div>
+</div>
+

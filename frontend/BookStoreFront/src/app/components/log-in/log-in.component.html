@@ -1,0 +1,24 @@
+<div [ngClass]="show ? 'login show' : 'login hide'">
+  <div class="form">
+    <input #login
+      type="text" 
+      [(ngModel)]="nickname" 
+      name="nickname"
+      placeholder="login" 
+      (ngModelChange)="loginChanged(login.value)"
+      [ngClass]=" validArray[0]? 'form-input' : 'error-input' ">
+    <input #pass
+      type="password" 
+      [(ngModel)]="password"
+      name="password"
+      placeholder="password" 
+      (ngModelChange)="passwordChanged(pass.value)"
+      [ngClass]=" validArray[1]? 'form-input' : 'error-input' ">
+    <div class="btn-box">
+      <button [ngClass]="all_correct? 'btn' : 'btn-disabled' " 
+      (click)="handleLogIn()">Submit</button>
+      <button class="btn" (click)="handleClean()">Clean</button>
+    </div>
+  </div>
+  <button class="closeBtn" (click)="handleClose(false)"></button>
+</div>

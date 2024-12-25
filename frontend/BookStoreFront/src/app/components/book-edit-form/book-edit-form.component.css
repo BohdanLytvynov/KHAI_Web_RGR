@@ -1,0 +1,33 @@
+.books-form {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show {
+  right: 100%;
+  animation: showElement .5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.hide {
+  right: 0;
+  animation: hideElement .5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showElement {
+  from {right: 100%}
+  to {right: 0%;}
+}
+
+@keyframes hideElement {
+  from {right: 0%}
+  to {right: 100%;}
+}

@@ -1,0 +1,220 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --text-light: #eef3ff;
+  --text-dark: #000000;
+  --text-primary: #2d4b81;
+  --bg-light: #dce4f5;
+  --bg-dark: #2d4b81;
+  --bg-light-red : #FB717E
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-light);
+}
+
+nav{
+  display: flex;
+  gap: 24px;
+}
+
+app-root {
+  overflow: hidden;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--text-primary);
+}
+h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+a {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 700;
+  transition: .5s;
+  border-bottom: 2px solid transparent;
+}
+a:hover {
+  border-bottom: 2px solid var(--text-primary);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  border: 2px solid var(--bg-dark);
+  min-width: 160px;
+  padding: 8px;
+  font-size: 16px;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-weight: 700;
+  transition: .2s;
+}
+.btn:hover {
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+}
+
+.btn-disabled{
+  border: 2px solid lightgray;
+  min-width: 160px;
+  padding: 8px;
+  font-size: 16px;
+  background: grey;
+  color: var(--text-light);
+  font-weight: 700;
+  transition: .2s;
+}
+
+.btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  background: var(--bg-light);
+  padding: 32px;
+}
+
+.form-input {
+  outline: none;
+  border: 2px solid #2d4b81;
+  background: var(--bg-light);
+  color: #2d4b81;
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+}
+
+.form-info {
+  margin: 24px 0;
+  color: var(--text-dark);
+  font-size: 24px;
+}
+
+.closeBtn {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid var(--bg-light);
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.closeBtn::before {
+  content: ' ';
+  width: 38px;
+  height: 2px;
+  background: var(--bg-light);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(45deg);
+}
+.closeBtn::after {
+  content: ' ';
+  width: 38px;
+  height: 2px;
+  background: var(--bg-light);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(-45deg);
+}
+.items-list {
+  padding: 32px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.card {
+  width: 100%;
+  border: 2px solid var(--bg-dark);
+  padding: 16px;
+  display: flex;
+}
+.card-info {
+  flex-grow: 2;
+  font-size: 18px;
+}
+.card-btn-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.error-input{
+  outline: none;
+  border: 3px solid red;
+  background: var(--bg-light-red);
+  color: white;
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+}
+
+.error-msg
+{
+  color: red;
+  font-size: 20px;  
+}
+
+a:hover
+{
+  cursor: pointer;
+}
+
+.err-msg-margin
+{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.ul-book {
+  padding-left: 1rem;
+  padding-top: 1px;
+}
+
+.p-bold
+{
+  font-weight: bold;
+  color: darkgreen;
+  font-size: 16px;
+}

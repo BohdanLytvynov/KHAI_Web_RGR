@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="profile-page">
+    <div class="profile-header">
+      <h2>My Profile Page</h2>
+      <nav>
+        <a routerLink="/main">Main Page</a>
+        <a routerLink="/">Log Out</a>
+      </nav>
+    </div>
+    <div class="profile-data">
+      <p class="user">Nickname: {{currentUser.nickname}}</p>      
+      <p class="user">Name: {{currentUser.name}}</p>
+      <p class="user">Surname: {{currentUser.surename}}</p>
+      <p class="user">Birthday: {{currentUser.birthday}}</p>
+      <p class="user">Address: {{currentUser.address}}</p>
+    </div>
+  </div>
+</div>

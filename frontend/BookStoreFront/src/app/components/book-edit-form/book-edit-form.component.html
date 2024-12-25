@@ -1,0 +1,33 @@
+<div [ngClass]="show ? 'books-form show' : 'books-form hide'">
+  <div class="form">
+    <p class="form-info">Edit the book with ID: {{currentBook.id}}</p>
+    <input 
+      type="text" #inpName
+      [(ngModel)]="currentBook.name"
+      (ngModelChange)="onNameChanged(inpName.value)"
+      name="bookName"
+      placeholder="book title" 
+      [ngClass]="validArray[0]? 'form-input' : 'error-input'">
+    <input 
+      type="text" #inpPub
+      [(ngModel)]="currentBook.pubYear" 
+      (ngModelChange)="onPubYearChanged(inpPub.value)"
+      name="bookYear"
+      placeholder="year"
+      [ngClass]="validArray[1]? 'form-input' : 'error-input'">
+
+   <input type="text" #inpGenres
+   [(ngModel)]="genres"
+   name="genres"
+   placeholder="Format of input: genre1,genre2"
+   [ngClass]="validArray[2]? 'form-input' : 'error-input'"
+   (ngModelChange)="onGenresChanged(inpGenres.value)">
+
+    <div class="btn-box">
+      <button class="btn" #Submit (click)="editBook()"
+      [ngClass]="all_field_correct? 'btn' : 'btn-disabled'">Submit</button>
+    </div>
+  </div>
+  <button class="closeBtn" (click)="handleClose(false)"></button>
+</div>
+

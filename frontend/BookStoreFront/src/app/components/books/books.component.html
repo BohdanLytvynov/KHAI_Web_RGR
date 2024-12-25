@@ -1,0 +1,43 @@
+<div class="column">
+  <h2>Books</h2>
+  <div>
+    <button class="btn" (click)="showBookFormComponent()">
+      Add a New Book
+    </button>
+  </div>
+  <div class="items-list">
+    @for (item of DataExchange.getAllBooks(); track $index) {
+      <div class="card">
+        <div class="card-info">
+          <p>Book's ID: {{$index + 1}}</p>
+          <p>Title: {{item.name}}</p>
+          <p>Year of publication: {{item.pubYear}}</p>
+          <p class="p-bold">Genres:</p>
+          <ul class="ul-book">
+              @for(g of item.geners; track $index)
+              {
+                <li>{{g.name}}</li>
+              }            
+          </ul>
+        </div>
+        <div class="card-btn-box">
+          <button class="btn" (click)="showBookEditFormComponent(item.id)">Edit Info</button>
+          <button class="btn" (click)="deleteBook(item.id)">Delete</button>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+@if(bookForm) {
+  <app-book-form 
+    [show]="showBookForm" 
+    (onChange)="hideBookFormComponent(false)">
+  </app-book-form>
+}
+@if(bookEditForm) {
+  <app-book-edit-form (onInit)="editFormInitialized()"
+    [show]="showBookEditForm" 
+    [id]="currentID" 
+    (onChange)="hideBookEditFormComponent()">
+  </app-book-edit-form>
+}

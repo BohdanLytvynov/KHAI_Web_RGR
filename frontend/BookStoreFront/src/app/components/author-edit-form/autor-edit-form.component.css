@@ -1,0 +1,33 @@
+.author-form {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show {
+  left: 100%;
+  animation: showElement .5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.hide {
+  right: 0;
+  animation: hideElement .5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showElement {
+  from {left: 100%}
+  to {left: 0%;}
+}
+
+@keyframes hideElement {
+  from {left: 0%}
+  to {left: 100%;}
+}

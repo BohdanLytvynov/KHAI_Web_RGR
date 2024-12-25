@@ -1,0 +1,45 @@
+<div class="column">
+  <h2>Authors</h2>
+  <div>
+    <button class="btn" (click)="showAuthorFormComponent()">
+      Add a New Author
+    </button>
+  </div>
+  <div class="items-list">
+    @for (item of DataExchange.getAllAuthors(); track $index) {
+      <div class="card">
+        <div class="card-info">
+          <p>Author's ID: {{$index + 1}}</p>
+          <p>Name: {{item.name}}</p>
+          <p>Surname: {{item.surename}}</p>
+          <p>Birthday: {{item.birthDate}}</p>
+        </div>
+        <div class="card-btn-box">
+          <button 
+            class="btn" 
+            (click)="showAuthorEditFormComponent(item.id)">
+            Edit Info
+          </button>
+          <button 
+            class="btn" 
+            (click)="deleteAuthor(item.id)">
+            Delete
+          </button>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+@if(authorForm) {
+  <app-author-form 
+    [show]="showAuthorForm" 
+    (onChange)="hideAuthorFormComponent(false)">
+  </app-author-form>
+}
+@if (authorEditForm) {
+  <app-autor-edit-form
+    [show]="showAuthorEditForm" 
+    [id]="currentID" 
+    (onChange)="hideAuthorEditFormComponent()">
+  </app-autor-edit-form>
+}
